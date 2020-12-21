@@ -1,0 +1,20 @@
+{
+    "name": "pyrex-fwi/plantuml",
+    "description": "Some plantuml poc",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christophe P",
+            "email": "yemistikris[at]acme.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"PyrexFwi\\PlantUml\\": "src/"}
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
