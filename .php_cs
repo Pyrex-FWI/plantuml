@@ -11,6 +11,7 @@ return $config->setRules([
         'strict_param' => true,
         'array_syntax' => ['syntax' => 'short'],
         '@PHP73Migration' => true,
+        'declare_strict_types' => true,
         'ordered_imports' => true,
         'binary_operator_spaces' => [
             'operators' => [
