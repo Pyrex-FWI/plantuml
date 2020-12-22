@@ -100,7 +100,7 @@ php test-2.php > test-2.plantuml
 ** Node A
 **[#lightgray] Node B
 *** Sub B.1
-***[#green]< Sub B.B //#This part not work at 22/12/20)
+***[#green]< Sub B.B //#This part not work at 22/12/20
 ** Node C
 
 @endwbs
