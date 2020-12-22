@@ -3,8 +3,9 @@ declare(strict_types=1);
 
 namespace PyrexFwi\PlantUml\WorkBreakdownStructure;
 
+use PyrexFwi\PlantUml\AbstractPlantUmlDocument;
 
-class WorkBreakdownStructure extends \PyrexFwi\PlantUml\AbstractPlantUmlDocument
+class WorkBreakdownStructure extends AbstractPlantUmlDocument
 {
     /**
      * @var WbsNodeInterface
@@ -37,5 +38,4 @@ class WorkBreakdownStructure extends \PyrexFwi\PlantUml\AbstractPlantUmlDocument
 
         return $this;
     }
-
 }

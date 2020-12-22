@@ -3,6 +3,7 @@
 
 namespace PyrexFwi\PlantUml\WorkBreakdownStructure;
 
+use InvalidArgumentException;
 
 class Node implements WbsNodeInterface
 {
@@ -37,9 +38,10 @@ class Node implements WbsNodeInterface
     public function normalize(int $level = null): string
     {
         $level = $level ? intval($level) : $this->level;
-        $stream = strtr('%level%inlineColor%position %text',
+        $stream = strtr(
+            '%level%inlineColor%position %text',
             [
-                '%level' => str_repeat('*' ,$level),
+                '%level' => str_repeat('*', $level),
                 '%inlineColor' => $this->inlineColor,
                 '%position' => $this->position,
                 '%text' => $this->name
@@ -59,7 +61,7 @@ class Node implements WbsNodeInterface
     {
         $name = $serviceNode->getName();
         if (isset($this->children[$name])) {
-            throw new \InvalidArgumentException(sprintf("The node name '%s' already exist in structure", $name));
+            throw new InvalidArgumentException(sprintf("The node name '%s' already exist in structure", $name));
         }
         $this->children[$name] = $serviceNode;
     }

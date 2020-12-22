@@ -3,7 +3,6 @@
 
 namespace PyrexFwi\PlantUml;
 
-
 interface PlantUmlDocumentInterface
 {
     public function getHeader(): ?string;

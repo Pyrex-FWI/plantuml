@@ -3,12 +3,11 @@ declare(strict_types=1);
 
 namespace PyrexFwi\PlantUml\WorkBreakdownStructure;
 
-
 use InvalidArgumentException;
 
 class Style
 {
-    const HORIZONTAL_ALIGNMENTS = ['left', 'right', 'center'];
+    public const HORIZONTAL_ALIGNMENTS = ['left', 'right', 'center'];
     /** @var string  */
     private $defaultLineColor = '#9bcd41';
     /** @var string  */
@@ -254,6 +253,4 @@ EOT;
 
         return $this;
     }
-
-
 }

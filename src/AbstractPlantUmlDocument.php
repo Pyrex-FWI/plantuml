@@ -3,7 +3,6 @@
 
 namespace PyrexFwi\PlantUml;
 
-
 use PyrexFwi\PlantUml\WorkBreakdownStructure\Style;
 
 abstract class AbstractPlantUmlDocument implements PlantUmlDocumentInterface
@@ -53,5 +52,4 @@ abstract class AbstractPlantUmlDocument implements PlantUmlDocumentInterface
     {
         return $this->style;
     }
-
 }
