@@ -1,4 +1,6 @@
 
+This package allow [WBS creation](https://plantuml.com/fr/wbs-diagram) 
+
 # Getting started
 
 ## Install
