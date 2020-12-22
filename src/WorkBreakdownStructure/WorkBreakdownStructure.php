@@ -30,6 +30,7 @@ class WorkBreakdownStructure extends AbstractPlantUmlDocument
     }
 
     /**
+     * @param Node $writeFor
      * @return static
      */
     public function addNode(Node $writeFor): self
@@ -37,5 +38,25 @@ class WorkBreakdownStructure extends AbstractPlantUmlDocument
         $this->rootNode->addChild($writeFor);
 
         return $this;
+    }
+
+    /**
+     *
+     * @param Node[] $writeFor
+     * @return static
+     */
+    public function addChildrenNodes(iterable $writeFor): self
+    {
+        $this->rootNode->addChildren($writeFor);
+
+        return $this;
+    }
+
+    /**
+     * @return WbsNodeInterface
+     */
+    public function getRootNode(): WbsNodeInterface
+    {
+        return $this->rootNode;
     }
 }

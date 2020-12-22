@@ -57,23 +57,27 @@ class Node implements WbsNodeInterface
         return $stream;
     }
 
-    public function addChild(Node $serviceNode): void
+    public function addChild(Node $serviceNode): WbsNodeInterface
     {
         $name = $serviceNode->getName();
         if (isset($this->children[$name])) {
             throw new InvalidArgumentException(sprintf("The node name '%s' already exist in structure", $name));
         }
         $this->children[$name] = $serviceNode;
+
+        return $this;
     }
 
     /**
      * @param Node[] $children
      */
-    public function addChildren(iterable $children): void
+    public function addChildren(iterable $children): WbsNodeInterface
     {
         foreach ($children as $child) {
             $this->addChild($child);
         }
+
+        return $this;
     }
 
     public function getName(): string

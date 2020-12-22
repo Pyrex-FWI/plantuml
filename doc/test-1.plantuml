@@ -1,0 +1,35 @@
+@startwbs
+
+<style>
+wbsDiagram {
+  // all lines (meaning connector and borders, there are no other lines in WBS) are black by default
+  Linecolor #9bcd41
+  FontColor #030f40
+  arrow {
+    //LineColor green
+    LineStyle 0
+    LineThickness 1.5
+  }
+
+  node {
+    BackgroundColor whitesmoke
+    HorizontalAlignment left
+    LineColor blue
+    LineStyle 0
+    LineThickness 2.5
+    Margin 3
+    MaximumWidth 0
+    Padding 12
+    RoundCorner 20
+  }
+
+
+}
+</style>
+
+* RootNode
+** Node A
+** Node B
+** Node C
+
+@endwbs

@@ -10,12 +10,12 @@ interface WbsNodeInterface
 
     public function normalize(int $level = null): ?string;
 
-    public function addChild(Node $serviceNode): void;
+    public function addChild(Node $serviceNode): self;
 
     /**
      * @param Node[] $children
      */
-    public function addChildren(iterable $children): void;
+    public function addChildren(iterable $children): self;
 
     public function getName(): string;
 }
