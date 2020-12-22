@@ -42,16 +42,17 @@ class Style
 
     /**
      * @param string $defaultFontColor
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultFontColor(string $defaultFontColor): Style
+    public function setDefaultFontColor(string $defaultFontColor): self
     {
         $this->defaultFontColor = $defaultFontColor;
 
         return $this;
     }
 
-    public function getDefaultStyle()
+    public function getDefaultStyle(): string
     {
         return <<<EOT
   // all lines (meaning connector and borders, there are no other lines in WBS) are black by default
@@ -96,6 +97,8 @@ EOT;
 
     /**
      * @param string $defaultArrowLineColor
+     *
+     * @return static
      */
     public function setDefaultArrowLineColor(string $defaultArrowLineColor): self
     {
@@ -104,6 +107,9 @@ EOT;
         return $this;
     }
 
+    /**
+     * @return static
+     */
     public function addStyle(string $style): self
     {
         $this->customStyle .= $style;
@@ -113,9 +119,10 @@ EOT;
 
     /**
      * @param float $defaultArrowLineThickness
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultArrowLineThickness(float $defaultArrowLineThickness): Style
+    public function setDefaultArrowLineThickness(float $defaultArrowLineThickness): self
     {
         $this->defaultArrowLineThickness = $defaultArrowLineThickness;
 
@@ -124,9 +131,10 @@ EOT;
 
     /**
      * @param float $defaultArrowLineStyle
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultArrowLineStyle(float $defaultArrowLineStyle)
+    public function setDefaultArrowLineStyle(float $defaultArrowLineStyle): self
     {
         $this->defaultArrowLineStyle = $defaultArrowLineStyle;
 
@@ -135,9 +143,10 @@ EOT;
 
     /**
      * @param string $defaultNodeBackgroundColor
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodeBackgroundColor(string $defaultNodeBackgroundColor): Style
+    public function setDefaultNodeBackgroundColor(string $defaultNodeBackgroundColor): self
     {
         $this->defaultNodeBackgroundColor = $defaultNodeBackgroundColor;
 
@@ -146,9 +155,10 @@ EOT;
 
     /**
      * @param string $defaultNodeHorizontalAlignment
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodeHorizontalAlignment(string $defaultNodeHorizontalAlignment): Style
+    public function setDefaultNodeHorizontalAlignment(string $defaultNodeHorizontalAlignment): self
     {
         if (!in_array($defaultNodeHorizontalAlignment, self::HORIZONTAL_ALIGNMENTS)) {
             throw new \InvalidArgumentException('Invalid alignment');
@@ -161,9 +171,10 @@ EOT;
 
     /**
      * @param string $defaultNodeLineColor
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodeLineColor(string $defaultNodeLineColor): Style
+    public function setDefaultNodeLineColor(string $defaultNodeLineColor): self
     {
         $this->defaultNodeLineColor = $defaultNodeLineColor;
 
@@ -172,9 +183,10 @@ EOT;
 
     /**
      * @param int $defaultNodeLineStyle
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodeLineStyle(int $defaultNodeLineStyle): Style
+    public function setDefaultNodeLineStyle(int $defaultNodeLineStyle): self
     {
         $this->defaultNodeLineStyle = $defaultNodeLineStyle;
 
@@ -183,9 +195,10 @@ EOT;
 
     /**
      * @param float $defaultNodeLineThickness
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodeLineThickness(float $defaultNodeLineThickness): Style
+    public function setDefaultNodeLineThickness(float $defaultNodeLineThickness): self
     {
         $this->defaultNodeLineThickness = $defaultNodeLineThickness;
 
@@ -194,7 +207,8 @@ EOT;
 
     /**
      * @param float $defaultNodeMargin
-     * @return Style
+     *
+     * @return static
      */
     public function setDefaultNodeMargin(float $defaultNodeMargin): self
     {
@@ -205,7 +219,8 @@ EOT;
 
     /**
      * @param float $defaultNodeMaximumWidth
-     * @return Style
+     *
+     * @return static
      */
     public function setDefaultNodeMaximumWidth(float $defaultNodeMaximumWidth): self
     {
@@ -216,9 +231,10 @@ EOT;
 
     /**
      * @param int $defaultNodePadding
-     * @return Style
+     *
+     * @return static
      */
-    public function setDefaultNodePadding(int $defaultNodePadding): Style
+    public function setDefaultNodePadding(int $defaultNodePadding): self
     {
         $this->defaultNodePadding = $defaultNodePadding;
 
@@ -227,7 +243,8 @@ EOT;
 
     /**
      * @param float $defaultNodeRoundCorner
-     * @return Style
+     *
+     * @return static
      */
     public function setDefaultNodeRoundCorner(float $defaultNodeRoundCorner): self
     {

@@ -17,7 +17,7 @@ class Node implements WbsNodeInterface
      */
     private $position;
     /**
-     * @var Node
+     * @var null|Node
      */
     private $parent;
     /** @var string */
@@ -26,6 +26,7 @@ class Node implements WbsNodeInterface
     /**
      * Node constructor.
      * @param string $text
+     * @param Node|null $parent
      */
     public function __construct(string $text, Node $parent = null)
     {
@@ -33,7 +34,7 @@ class Node implements WbsNodeInterface
         $this->parent = $parent;
     }
 
-    public function normalize(int $level = null): ?string
+    public function normalize(int $level = null): string
     {
         $level = $level ? intval($level) : $this->level;
         $stream = strtr('%level%inlineColor%position %text',
@@ -78,6 +79,9 @@ class Node implements WbsNodeInterface
         return $this->name;
     }
 
+    /**
+     * @return static
+     */
     public function setToLeftPosition(): self
     {
         $this->position = self::DIRECTION_LEFT;
@@ -85,6 +89,9 @@ class Node implements WbsNodeInterface
         return $this;
     }
 
+    /**
+     * @return static
+     */
     public function setToRightPosition(): self
     {
         $this->position = self::DIRECTION_RIGHT;
@@ -92,6 +99,9 @@ class Node implements WbsNodeInterface
         return $this;
     }
 
+    /**
+     * @return static
+     */
     public function setInlineColor(string $w3cColor): self
     {
         $this->inlineColor = sprintf('[#%s]', $w3cColor);

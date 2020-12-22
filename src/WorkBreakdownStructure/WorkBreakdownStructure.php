@@ -25,9 +25,12 @@ class WorkBreakdownStructure extends \PyrexFwi\PlantUml\AbstractPlantUmlDocument
 
     public function getBody(): string
     {
-        return $this->rootNode->normalize();
+        return (string) $this->rootNode->normalize();
     }
 
+    /**
+     * @return static
+     */
     public function addNode(Node $writeFor): self
     {
         $this->rootNode->addChild($writeFor);

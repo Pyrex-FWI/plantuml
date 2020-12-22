@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class NodeTest extends TestCase
 {
 
-    public function testInstance()
+    public function testInstance(): Node
     {
         $node = new Node('MyNode');
         $this->assertEquals('MyNode', $node->getName());
@@ -20,8 +20,10 @@ class NodeTest extends TestCase
 
     /**
      * @depends testInstance
+     *
+     * @return Node
      */
-    public function testSetToLeftPosition(Node $node)
+    public function testSetToLeftPosition(Node $node): Node
     {
         $node->setToLeftPosition();
         $this->assertStringContainsString('<', $node->normalize());
@@ -52,9 +54,12 @@ class NodeTest extends TestCase
 
     /**
      * @depends testAddChildren
+     *
      * @param Node $node
+     *
+     * @return Node
      */
-    public function testSetToRightPosition(Node $node)
+    public function testSetToRightPosition(Node $node): Node
     {
         $node->setToRightPosition();
         $this->assertStringContainsString('>', $node->normalize());
@@ -64,8 +69,10 @@ class NodeTest extends TestCase
 
     /**
      * @depends testSetToRightPosition
+     *
+     * @return Node
      */
-    public function testSetInlineColor(Node $node)
+    public function testSetInlineColor(Node $node): Node
     {
         $node->setInlineColor('blue');
         $this->assertStringContainsStringIgnoringCase('[#blue]', $node->normalize());

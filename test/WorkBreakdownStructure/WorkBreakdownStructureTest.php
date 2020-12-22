@@ -17,20 +17,22 @@ class WorkBreakdownStructureTest extends TestCase
 
     /**
      * @beforeClass
+     *
+     * @return void
      */
-    public static function beforeFixtures()
+    public static function beforeFixtures(): void
     {
         self::$wbs = new WorkBreakdownStructure('Root');
     }
 
 
-    public function testInstance()
+    public function testInstance(): void
     {
         $wbs = new WorkBreakdownStructure('Instance');
         $this->assertInstanceOf(WorkBreakdownStructure::class, $wbs);
     }
 
-    public function testAddNode()
+    public function testAddNode(): void
     {
         self::$wbs->addNode(new Node('A'));
 
@@ -40,7 +42,7 @@ class WorkBreakdownStructureTest extends TestCase
         $this->assertEquals('** A', $contentArray[1]);
     }
 
-    public function testGetDocumentContent()
+    public function testGetDocumentContent(): void
     {
         $content = self::$wbs->getDocumentContent();
         $this->assertStringContainsString('* Root', $content);
