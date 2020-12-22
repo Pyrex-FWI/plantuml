@@ -6,6 +6,7 @@ namespace PyrexFwi\PlantUml\WorkBreakdownStructure;
 
 class Style
 {
+    const HORIZONTAL_ALIGNMENTS = ['left', 'right', 'center'];
     /** @var string  */
     private $defaultLineColor = '#9bcd41';
     /** @var string  */
@@ -149,6 +150,10 @@ EOT;
      */
     public function setDefaultNodeHorizontalAlignment(string $defaultNodeHorizontalAlignment): Style
     {
+        if (!in_array($defaultNodeHorizontalAlignment, self::HORIZONTAL_ALIGNMENTS)) {
+            throw new \InvalidArgumentException('Invalid alignment');
+        }
+
         $this->defaultNodeHorizontalAlignment = $defaultNodeHorizontalAlignment;
 
         return $this;

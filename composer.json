@@ -3,7 +3,8 @@
     "description": "Some plantuml poc",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.3"
     },
     "license": "MIT",
     "authors": [
@@ -14,6 +15,11 @@
     ],
     "autoload": {
         "psr-4": {"PyrexFwi\\PlantUml\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PlantUmlTest\\": "test"
+        }
     },
     "minimum-stability": "stable",
     "require": {}
