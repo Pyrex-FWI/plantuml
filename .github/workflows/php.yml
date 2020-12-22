@@ -1,4 +1,4 @@
-name: PHP Composer
+name: PHP Tests
 
 on:
   push:
@@ -15,7 +15,8 @@ jobs:
 
     - name: Setup PHP Action
       uses: shivammathur/setup-php@2.9.0
-      php-version: '7.3'
+      with:
+        php-version: '7.3'
 
     - uses: actions/checkout@v2
 
