@@ -2,13 +2,14 @@
 
 namespace PlantUmlTest\WorkBreakdownStructure;
 
-use PyrexFwi\PlantUml\WorkBreakdownStructure\Style;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use PyrexFwi\PlantUml\WorkBreakdownStructure\Style;
 
 class StyleTest extends TestCase
 {
     /** @var Style */
-    static protected $style;
+    protected static $style;
 
     /**
      * @beforeClass
@@ -38,9 +39,8 @@ class StyleTest extends TestCase
         self::$style->setDefaultNodeHorizontalAlignment('center');
         $normalizedContent = self::$style->normalize();
         $this->assertStringContainsString('HorizontalAlignment center', $normalizedContent);
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         self::$style->setDefaultNodeHorizontalAlignment('space');
-
     }
 
     public function testSetDefaultNodeMargin(): void

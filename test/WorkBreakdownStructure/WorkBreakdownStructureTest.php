@@ -13,7 +13,7 @@ use PyrexFwi\PlantUml\WorkBreakdownStructure\WorkBreakdownStructure;
 class WorkBreakdownStructureTest extends TestCase
 {
     /** @var WorkBreakdownStructure */
-    static protected $wbs;
+    protected static $wbs;
 
     /**
      * @beforeClass
@@ -53,5 +53,4 @@ class WorkBreakdownStructureTest extends TestCase
         $this->assertStringStartsWith(self::$wbs->getHeader(), $content);
         $this->assertStringEndsWith(self::$wbs->getFooter(), $content);
     }
-
 }

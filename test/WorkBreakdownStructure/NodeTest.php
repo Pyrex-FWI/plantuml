@@ -2,12 +2,12 @@
 
 namespace PlantUmlTest\WorkBreakdownStructure;
 
-use PyrexFwi\PlantUml\WorkBreakdownStructure\Node;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
+use PyrexFwi\PlantUml\WorkBreakdownStructure\Node;
 
 class NodeTest extends TestCase
 {
-
     public function testInstance(): Node
     {
         $node = new Node('MyNode');
@@ -40,7 +40,7 @@ class NodeTest extends TestCase
     {
         $node->addChildren([
             new Node('A'),
-            new Node('B')
+            new Node('B'),
         ]);
 
         $normalize = $node->normalize();
@@ -88,7 +88,7 @@ class NodeTest extends TestCase
      */
     public function testAddChild(Node $node)
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $node->addChild(new Node('C'));
         $this->assertStringContainsString('** C', $node->normalize());
         $node->addChild(new Node('C'));

@@ -56,28 +56,28 @@ class Style
     public function getDefaultStyle(): string
     {
         return <<<EOT
-  // all lines (meaning connector and borders, there are no other lines in WBS) are black by default
-  Linecolor $this->defaultLineColor
-  FontColor $this->defaultFontColor
-  arrow {
-    //LineColor $this->defaultArrowLineColor
-    LineStyle $this->defaultArrowLineStyle
-    LineThickness $this->defaultArrowLineThickness
-  }
+              // all lines (meaning connector and borders, there are no other lines in WBS) are black by default
+              Linecolor $this->defaultLineColor
+              FontColor $this->defaultFontColor
+              arrow {
+                //LineColor $this->defaultArrowLineColor
+                LineStyle $this->defaultArrowLineStyle
+                LineThickness $this->defaultArrowLineThickness
+              }
 
-  node {
-    BackgroundColor $this->defaultNodeBackgroundColor
-    HorizontalAlignment $this->defaultNodeHorizontalAlignment
-    LineColor $this->defaultNodeLineColor
-    LineStyle $this->defaultNodeLineStyle
-    LineThickness $this->defaultNodeLineThickness
-    Margin $this->defaultNodeMargin
-    MaximumWidth $this->defaultNodeMaximumWidth
-    Padding $this->defaultNodePadding
-    RoundCorner $this->defaultNodeRoundCorner
-  }
+              node {
+                BackgroundColor $this->defaultNodeBackgroundColor
+                HorizontalAlignment $this->defaultNodeHorizontalAlignment
+                LineColor $this->defaultNodeLineColor
+                LineStyle $this->defaultNodeLineStyle
+                LineThickness $this->defaultNodeLineThickness
+                Margin $this->defaultNodeMargin
+                MaximumWidth $this->defaultNodeMaximumWidth
+                Padding $this->defaultNodePadding
+                RoundCorner $this->defaultNodeRoundCorner
+              }
 
-EOT;
+            EOT;
     }
 
     public function normalize(): string
@@ -161,7 +161,7 @@ EOT;
      */
     public function setDefaultNodeHorizontalAlignment(string $defaultNodeHorizontalAlignment): self
     {
-        if (!in_array($defaultNodeHorizontalAlignment, self::HORIZONTAL_ALIGNMENTS)) {
+        if (!in_array($defaultNodeHorizontalAlignment, self::HORIZONTAL_ALIGNMENTS, true)) {
             throw new InvalidArgumentException('Invalid alignment');
         }
 

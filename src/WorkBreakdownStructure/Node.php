@@ -41,15 +41,15 @@ class Node implements WbsNodeInterface
         $stream = strtr(
             '%level%inlineColor%position %text',
             [
-                '%level' => str_repeat('*', $level),
+                '%level'       => str_repeat('*', $level),
                 '%inlineColor' => $this->inlineColor,
-                '%position' => $this->position,
-                '%text' => $this->name
+                '%position'    => $this->position,
+                '%text'        => $this->name,
             ]
         );
 
         foreach ($this->children as $subNode) {
-            if ($str = $subNode->normalize($level+1)) {
+            if ($str = $subNode->normalize($level + 1)) {
                 $stream .= "\n".$str;
             }
         }
@@ -102,6 +102,7 @@ class Node implements WbsNodeInterface
     }
 
     /**
+     * @param string $w3cColor
      * @return static
      */
     public function setInlineColor(string $w3cColor): self
