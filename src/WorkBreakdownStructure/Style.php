@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace PyrexFwi\PlantUml\WorkBreakdownStructure;
 
 
+use InvalidArgumentException;
+
 class Style
 {
     const HORIZONTAL_ALIGNMENTS = ['left', 'right', 'center'];
@@ -81,7 +83,7 @@ EOT;
 
     public function normalize(): string
     {
-        return sprintf("%s\n%s", $this->getDefaultStyle(), $this->customStyle);
+        return sprintf("wbsDiagram {\n%s\n%s\n", $this->getDefaultStyle(), $this->customStyle);
     }
 
     /**
@@ -161,7 +163,7 @@ EOT;
     public function setDefaultNodeHorizontalAlignment(string $defaultNodeHorizontalAlignment): self
     {
         if (!in_array($defaultNodeHorizontalAlignment, self::HORIZONTAL_ALIGNMENTS)) {
-            throw new \InvalidArgumentException('Invalid alignment');
+            throw new InvalidArgumentException('Invalid alignment');
         }
 
         $this->defaultNodeHorizontalAlignment = $defaultNodeHorizontalAlignment;

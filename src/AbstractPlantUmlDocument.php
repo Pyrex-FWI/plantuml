@@ -37,7 +37,7 @@ abstract class AbstractPlantUmlDocument implements PlantUmlDocumentInterface
             "%start\n\n%style\n\n%body\n\n%end",
             [
                 '%start' => $this->getHeader(),
-                '%style' => "<style>\nwbsDiagram {\n".$this->getStyle()->normalize()."\n}\n</style>",
+                '%style' => "<style>\n".$this->getStyle()->normalize()."}\n</style>",
                 '%body' => $this->getBody(),
                 '%end' => $this->getFooter(),
             ]
