@@ -21,4 +21,11 @@ psalm.run:
 psalm.alter:
 	vendor/bin/psalm --alter --issues=all
 
-test: phpunit.run psalm.run
+phpcs.run:
+	vendor/bin/php-cs-fixer fix --config .php_cs --allow-risky=yes src test
+
+qa: phpcs.run psalm.run
+
+test: qa phpunit.run
+
+
