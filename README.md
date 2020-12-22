@@ -54,6 +54,7 @@ php test-1.php > test-1.plantuml
 
 ![test-1](doc/test-1.png)
 
+[Show or edit on planttext](https://www.planttext.com/?text=ZL5BJyCm3BxdLrZY0XEYtOC3qeJsG8W38CIGTdORhusMEbAIQWoq_uxJLZrpIEBlyoEVxLM8wEEf24ejGpnRUbG2dWnM7XluLG1P1cWjMCCKuBeXPCCLb8wPokWy86iedDVamot4cZm1oc47Bg4XqJ3iDxkRpbLOB8zGd47J0LiRvPDN2IgTbN9N3qMf5rFXdXt7RS_by_omo8L3xzsfavM4fQm-el94tB69swL681_nLstAewW8CBsx5_QYv6AdQQYq4JsLTothljgfDf52uuxKkL-SDpyY1ktQceeRuWYM3d6itsSLjgL_I9Xr4W3Uq5SobVa0latJDdkZOpraVQ3MQTBJMGS_UtcUPQIpl6z2NTGo6xQc9XBYuhjqfIOJI2-iHsipMbkbLiHQblm7)
 
 #### Sample 2
 
@@ -109,6 +110,9 @@ php test-2.php > test-2.plantuml
 ```
 
 ![test-2](doc/test-2.png)
+
+[Show or edit on planttext](https://www.planttext.com/?text=ZL8zJyCm4DtzAqxA0X5gaxOCI1LgKuGO026ArA7guCJNn8fpHewZKX3_dNCITMRmntk-UtvtzghrqlbJtWgnRFtPuBrWyA1bwMG3Fm9WEWLf31XDsC9LWv8qbL1O8YoyTI19GMwTGjVUWA_G8KWUPC46D2PgWbsslUwFSYEB6l8pA3pApdY-v9c32cjOBhhB2xL8cNkqv3S3byoJuo9XJZfdJxsjO2na3H6bGwIU3Tms50B91NzKkgZPHGlfv9RPNy4JMOMZKiP-IcSxKeFQgT8UsyRMs1y_MQU_sOmqQwDBQf0y63pwY_wGbPiE_s5Xrbi0U96kvAxCH_2bcwxPQUMhCUjDAXKwdSvw-3xOSyGjdIL34U9NBAVZgubu7trggWySQVqh5oVY6C8AQzxj8xPUUNxLys5WCsPZs7OvP9CqxFTHtyN3SYIpYy16Y1MIue_n1m00)
+
 
 #### Useful links
 
