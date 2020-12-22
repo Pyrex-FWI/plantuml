@@ -17,8 +17,8 @@ $nodes[1]
             ->setToLeftPosition()
             ->setInlineColor('green')
     )
-    ->setInlineColor('lightgray')
 ;
+$nodes[2]->setInlineColor('lightgray');
 
 $wbs
     ->addChildrenNodes($nodes)
