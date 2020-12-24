@@ -5,7 +5,8 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "vimeo/psalm": "^4.3",
-        "friendsofphp/php-cs-fixer": "^2.17"
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "psalm/plugin-phpunit": "^0.15.0"
     },
     "license": "MIT",
     "authors": [
@@ -22,8 +23,5 @@
             "PlantUmlTest\\": "test"
         }
     },
-    "minimum-stability": "stable",
-    "require": {
-        "psalm/plugin-phpunit": "^0.15.0"
-    }
+    "minimum-stability": "stable"
 }
