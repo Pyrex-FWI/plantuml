@@ -42,6 +42,18 @@ class WorkBreakdownStructureTest extends TestCase
         $this->assertEquals('** A', $contentArray[1]);
     }
 
+    public function testaddChildrenNodes(): void
+    {
+        self::$wbs->addChildrenNodes([new Node('A'), new Node('B')]);
+        $this->assertStringContainsString('** A', self::$wbs->getBody());
+        $this->assertStringContainsString('** B', self::$wbs->getBody());
+    }
+
+    public function testgetRootNode(): void
+    {
+        $this->assertEquals('Root', self::$wbs->getRootNode()->getName());
+    }
+
     public function testGetDocumentContent(): void
     {
         $content = self::$wbs->getDocumentContent();
