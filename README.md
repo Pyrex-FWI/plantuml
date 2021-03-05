@@ -9,7 +9,6 @@ This package allow [WBS creation](https://plantuml.com/fr/wbs-diagram)
 composer req --dev pyrex-fwi/plantuml
 ```
 
-
 ### Sample usages
 
 #### Sample 1
